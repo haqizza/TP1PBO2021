@@ -16,7 +16,14 @@ namespace TP1PBO2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            LoginForm loginForm = new LoginForm();
+            Application.Run(loginForm);
+
+            if (loginForm.UserSuccessfullyAuthenticated)
+            {
+                Application.Run(new MainMenu());
+            }
         }
     }
 }
