@@ -23,11 +23,16 @@ namespace TP1PBO2021
             if(tbPassword.Text == "pbo123")
             {
                 UserSuccessfullyAuthenticated = true;
-                Close();
+                this.Hide();
+                
+                var mainMenu = new MainMenu();
+                mainMenu.ShowDialog();
+
+                this.Show();
             }
             else
             {   
-                string message = "Username atau Password Anda salah";
+                string message = "Password Anda salah";
                 string title = "Warning";
                 MessageBox.Show(message, title);
             }

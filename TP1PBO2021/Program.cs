@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace TP1PBO2021
@@ -17,13 +18,8 @@ namespace TP1PBO2021
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            LoginForm loginForm = new LoginForm();
-            Application.Run(loginForm);
-
-            if (loginForm.UserSuccessfullyAuthenticated)
-            {
-                Application.Run(new MainMenu());
-            }
+            Application.Run(new LoginForm());
         }
+
     }
 }

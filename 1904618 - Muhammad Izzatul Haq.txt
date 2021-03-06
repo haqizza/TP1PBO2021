@@ -1,0 +1,16 @@
+1904618
+Muhammad Izzatul Haq
+
+Saya Muhammad Izzatul Haq mengerjakan Tugas Praktikum 1 dalam praktikum mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah di spesifikasikan. Aamiin.
+
+
+
+Karena belum terbiasa dengan Desktop UI dan bahasanya, banyak hal yang harus dicari, seperti mengenai komponen dan agar suatu method bisa dipanggil di kelas lain, menyambungkan modal dari 1 ke yang lain, dll.
+
+Awalnya saya kesulitan menampilkan data barang-barang, tapi setelah menemukan, ternyata ada kesamaan dengan komponen web, komponen dari satu bisa ditempatkan di yang lain walaupun dengan keterbatasan.
+
+Intellicodenya bekerja dengan baik di rata rata kejadian, walaupun tidak menyertakan jawaban, sehingga mempermudah, sehingga bisa selesai dalam waktu singkat
+
+Banyak yang bisa saya pelajari dari ini, dimulai dari bahasa baru, Desktop UI, dll.
+
+

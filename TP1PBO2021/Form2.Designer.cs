@@ -34,18 +34,8 @@ namespace TP1PBO2021
             this.cmbHarga = new System.Windows.Forms.ComboBox();
             this.cmbJenisBarang = new System.Windows.Forms.ComboBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.pnlDetailBarang = new System.Windows.Forms.Panel();
-            this.panelBarang = new System.Windows.Forms.Panel();
-            this.flpBarang1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblBarang = new System.Windows.Forms.Label();
-            this.btnDetailBeli = new System.Windows.Forms.Button();
-            this.lblDetailHarga = new System.Windows.Forms.Label();
-            this.lblDetailNamaBarang = new System.Windows.Forms.Label();
-            this.pbDetail = new System.Windows.Forms.PictureBox();
+            pnlDetailBarang = new System.Windows.Forms.Panel();
+            flpDetail = new System.Windows.Forms.FlowLayoutPanel();
             this.lblDetailBarang = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblHome = new System.Windows.Forms.Label();
@@ -59,19 +49,19 @@ namespace TP1PBO2021
             this.pbWebCatalog = new System.Windows.Forms.PictureBox();
             this.pnlKembali = new System.Windows.Forms.Panel();
             this.btnKembali = new System.Windows.Forms.Button();
+            this.lblBarang = new System.Windows.Forms.Label();
+            this.flpBarang = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelBarang = new System.Windows.Forms.Panel();
             this.pnlCari.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.pnlDetailBarang.SuspendLayout();
-            this.panelBarang.SuspendLayout();
-            this.flpBarang1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDetail)).BeginInit();
+            pnlDetailBarang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlDataDiri.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWebCatalog)).BeginInit();
             this.pnlKembali.SuspendLayout();
+            this.panelBarang.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCari
@@ -135,138 +125,29 @@ namespace TP1PBO2021
             // 
             // pnlDetailBarang
             // 
-            this.pnlDetailBarang.Controls.Add(this.panelBarang);
-            this.pnlDetailBarang.Controls.Add(this.btnDetailBeli);
-            this.pnlDetailBarang.Controls.Add(this.lblDetailHarga);
-            this.pnlDetailBarang.Controls.Add(this.lblDetailNamaBarang);
-            this.pnlDetailBarang.Controls.Add(this.pbDetail);
-            this.pnlDetailBarang.Controls.Add(this.lblDetailBarang);
-            this.pnlDetailBarang.Location = new System.Drawing.Point(155, 80);
-            this.pnlDetailBarang.Name = "pnlDetailBarang";
-            this.pnlDetailBarang.Size = new System.Drawing.Size(647, 369);
-            this.pnlDetailBarang.TabIndex = 2;
+            pnlDetailBarang.Controls.Add(flpDetail);
+            pnlDetailBarang.Controls.Add(this.lblDetailBarang);
+            pnlDetailBarang.Location = new System.Drawing.Point(3, 3);
+            pnlDetailBarang.Name = "pnlDetailBarang";
+            pnlDetailBarang.Size = new System.Drawing.Size(647, 369);
+            pnlDetailBarang.TabIndex = 2;
+            pnlDetailBarang.Visible = false;
+            pnlDetailBarang.Paint += new System.Windows.Forms.PaintEventHandler(pnlDetailBarang_Paint);
             // 
-            // panelBarang
+            // flpDetail
             // 
-            this.panelBarang.Controls.Add(this.flpBarang1);
-            this.panelBarang.Controls.Add(this.lblBarang);
-            this.panelBarang.Location = new System.Drawing.Point(0, 0);
-            this.panelBarang.Name = "panelBarang";
-            this.panelBarang.Size = new System.Drawing.Size(647, 369);
-            this.panelBarang.TabIndex = 5;
-            // 
-            // flpBarang1
-            // 
-            this.flpBarang1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flpBarang1.Controls.Add(this.pictureBox1);
-            this.flpBarang1.Controls.Add(this.label3);
-            this.flpBarang1.Controls.Add(this.label2);
-            this.flpBarang1.Controls.Add(this.button1);
-            this.flpBarang1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpBarang1.Location = new System.Drawing.Point(22, 67);
-            this.flpBarang1.Name = "flpBarang1";
-            this.flpBarang1.Size = new System.Drawing.Size(109, 206);
-            this.flpBarang1.TabIndex = 5;
-            this.flpBarang1.WrapContents = false;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.flpBarang1.SetFlowBreak(this.label3, true);
-            this.label3.Location = new System.Drawing.Point(18, 112);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nama Barang";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 101);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 135);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Rp.100000";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(16, 158);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Beli";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblBarang
-            // 
-            this.lblBarang.AutoSize = true;
-            this.lblBarang.Location = new System.Drawing.Point(19, 18);
-            this.lblBarang.Name = "lblBarang";
-            this.lblBarang.Size = new System.Drawing.Size(80, 13);
-            this.lblBarang.TabIndex = 0;
-            this.lblBarang.Text = "Semua Barang:";
-            // 
-            // btnDetailBeli
-            // 
-            this.btnDetailBeli.Location = new System.Drawing.Point(285, 233);
-            this.btnDetailBeli.Name = "btnDetailBeli";
-            this.btnDetailBeli.Size = new System.Drawing.Size(75, 23);
-            this.btnDetailBeli.TabIndex = 4;
-            this.btnDetailBeli.Text = "Beli";
-            this.btnDetailBeli.UseVisualStyleBackColor = true;
-            // 
-            // lblDetailHarga
-            // 
-            this.lblDetailHarga.AutoSize = true;
-            this.lblDetailHarga.Location = new System.Drawing.Point(290, 206);
-            this.lblDetailHarga.Name = "lblDetailHarga";
-            this.lblDetailHarga.Size = new System.Drawing.Size(60, 13);
-            this.lblDetailHarga.TabIndex = 3;
-            this.lblDetailHarga.Text = "Rp.100000";
-            this.lblDetailHarga.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblDetailNamaBarang
-            // 
-            this.lblDetailNamaBarang.AutoSize = true;
-            this.lblDetailNamaBarang.Location = new System.Drawing.Point(287, 178);
-            this.lblDetailNamaBarang.Name = "lblDetailNamaBarang";
-            this.lblDetailNamaBarang.Size = new System.Drawing.Size(72, 13);
-            this.lblDetailNamaBarang.TabIndex = 2;
-            this.lblDetailNamaBarang.Text = "Nama Barang";
-            this.lblDetailNamaBarang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblDetailNamaBarang.Click += new System.EventHandler(this.lblDetailNamaBarang_Click);
-            // 
-            // pbDetail
-            // 
-            this.pbDetail.Location = new System.Drawing.Point(260, 49);
-            this.pbDetail.Name = "pbDetail";
-            this.pbDetail.Size = new System.Drawing.Size(122, 122);
-            this.pbDetail.TabIndex = 1;
-            this.pbDetail.TabStop = false;
+            flpDetail.Location = new System.Drawing.Point(247, 68);
+            flpDetail.Name = "flpDetail";
+            flpDetail.Size = new System.Drawing.Size(130, 224);
+            flpDetail.TabIndex = 1;
             // 
             // lblDetailBarang
             // 
             this.lblDetailBarang.AutoSize = true;
-            this.lblDetailBarang.Location = new System.Drawing.Point(19, 18);
+            this.lblDetailBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetailBarang.Location = new System.Drawing.Point(18, 10);
             this.lblDetailBarang.Name = "lblDetailBarang";
-            this.lblDetailBarang.Size = new System.Drawing.Size(77, 13);
+            this.lblDetailBarang.Size = new System.Drawing.Size(114, 20);
             this.lblDetailBarang.TabIndex = 0;
             this.lblDetailBarang.Text = "Detail Barang :";
             // 
@@ -401,27 +282,49 @@ namespace TP1PBO2021
             this.btnKembali.UseVisualStyleBackColor = true;
             this.btnKembali.Click += new System.EventHandler(this.btnKembali_Click);
             // 
+            // lblBarang
+            // 
+            this.lblBarang.AutoSize = true;
+            this.lblBarang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBarang.Location = new System.Drawing.Point(18, 10);
+            this.lblBarang.Name = "lblBarang";
+            this.lblBarang.Size = new System.Drawing.Size(116, 20);
+            this.lblBarang.TabIndex = 0;
+            this.lblBarang.Text = "Semua Barang";
+            // 
+            // flpBarang
+            // 
+            this.flpBarang.AutoScroll = true;
+            this.flpBarang.Location = new System.Drawing.Point(0, 34);
+            this.flpBarang.Name = "flpBarang";
+            this.flpBarang.Size = new System.Drawing.Size(644, 335);
+            this.flpBarang.TabIndex = 7;
+            // 
+            // panelBarang
+            // 
+            this.panelBarang.Controls.Add(pnlDetailBarang);
+            this.panelBarang.Controls.Add(this.flpBarang);
+            this.panelBarang.Controls.Add(this.lblBarang);
+            this.panelBarang.Location = new System.Drawing.Point(153, 80);
+            this.panelBarang.Name = "panelBarang";
+            this.panelBarang.Size = new System.Drawing.Size(647, 369);
+            this.panelBarang.TabIndex = 5;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panelBarang);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.pnlKembali);
-            this.Controls.Add(this.pnlDetailBarang);
             this.Controls.Add(this.pnlCari);
             this.Name = "MainMenu";
             this.Text = "Menu Utama";
             this.pnlCari.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.pnlDetailBarang.ResumeLayout(false);
-            this.pnlDetailBarang.PerformLayout();
-            this.panelBarang.ResumeLayout(false);
-            this.panelBarang.PerformLayout();
-            this.flpBarang1.ResumeLayout(false);
-            this.flpBarang1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDetail)).EndInit();
+            pnlDetailBarang.ResumeLayout(false);
+            pnlDetailBarang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHome)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
@@ -430,6 +333,8 @@ namespace TP1PBO2021
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbWebCatalog)).EndInit();
             this.pnlKembali.ResumeLayout(false);
+            this.panelBarang.ResumeLayout(false);
+            this.panelBarang.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -440,7 +345,6 @@ namespace TP1PBO2021
         private System.Windows.Forms.ComboBox cmbJenisBarang;
         private System.Windows.Forms.Button btnCari;
         private System.Windows.Forms.ComboBox cmbHarga;
-        private System.Windows.Forms.Panel pnlDetailBarang;
         private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label lblHome;
         private System.Windows.Forms.PictureBox pbHome;
@@ -452,18 +356,12 @@ namespace TP1PBO2021
         private System.Windows.Forms.Label lblNama;
         private System.Windows.Forms.Panel pnlKembali;
         private System.Windows.Forms.Button btnKembali;
-        private System.Windows.Forms.Label lblDetailNamaBarang;
-        private System.Windows.Forms.PictureBox pbDetail;
         private System.Windows.Forms.Label lblDetailBarang;
-        private System.Windows.Forms.Button btnDetailBeli;
-        private System.Windows.Forms.Label lblDetailHarga;
         private System.Windows.Forms.LinkLabel lblWebCatalog;
         private System.Windows.Forms.Panel panelBarang;
-        private System.Windows.Forms.FlowLayoutPanel flpBarang1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel flpBarang;
         private System.Windows.Forms.Label lblBarang;
+        public static System.Windows.Forms.FlowLayoutPanel flpDetail;
+        public static System.Windows.Forms.Panel pnlDetailBarang;
     }
 }
